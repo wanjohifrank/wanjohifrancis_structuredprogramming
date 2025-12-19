@@ -45,3 +45,38 @@ int val = *p;  // val gets the value pointed to by p
 Returns the memory address of a variable.
 int a = 10;
 int *p = &a;
+
+
+
+question 3
+Dereferencing a pointer means accessing or manipulating the value stored at the memory address the pointer is pointing to. This is done using the dereference operator
+
+Example 
+#include <stdio.h>
+
+int main() {
+    int num = 10;      // Declare an integer variable 'num' with value 10
+    int *ptr = &num;   // Declare a pointer 'ptr' that stores the address of 'num'
+
+    // Accessing the value using the pointer (dereferencing)
+    printf("Value of num using pointer: %d\n", *ptr);
+
+    // Changing the value of 'num' using the pointer
+    *ptr = 20;
+
+    // Print the changed value of 'num'
+    printf("New value of num after dereferencing and assignment: %d\n", num);
+
+    return 0;
+}
+Explanation
+Pointer Declaration and Initialization:
+int *ptr = &num; means ptr is a pointer to an integer, and it stores the address of the variable num.
+Dereferencing to Access Value:
+*ptr accesses the value stored at the memory address held by ptr.
+So, *ptr is equivalent to num in this context.
+printf("Value of num using pointer: %d\n", *ptr); prints the value 10.
+Dereferencing to Modify Value:
+*ptr = 20; changes the value stored at the memory address pointed to by ptr.
+This effectively changes num to 20.
+Printing num after this shows the updated value 20.
